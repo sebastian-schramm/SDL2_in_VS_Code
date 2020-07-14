@@ -1,0 +1,66 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Debug",
+            "command": "C:\\MinGW\\bin\\g++.exe",
+            "args": [
+                "-g",
+                "${workspaceFolder}\\src\\*.cpp",
+                "-Wall",
+                "-o",
+                "${workspaceFolder}\\bin\\debug\\main.exe",
+                "-I${workspaceFolder}\\include",
+                "-IC:\\Development\\SDL2_MinGW_32Bit\\include",
+                "-LC:\\Development\\SDL2_MinGW_32Bit\\lib",
+                "-lmingw32",
+                "-lSDL2main",
+                "-lSDL2",
+                "-lSDL2_image",
+                "-mwindows"
+            ],
+            "options": {
+                "cwd": "C:\\MinGW\\bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "shell",
+            "label": "Release",
+            "command": "C:\\MinGW\\bin\\g++.exe",
+            "args": [
+                "-O3",
+                "${workspaceFolder}\\src\\*.cpp",
+                "-Wall",
+                "-o",
+                "${workspaceFolder}\\bin\\release\\main.exe",
+                "-s",
+                "-I${workspaceFolder}\\include",
+                "-IC:\\Development\\SDL2_MinGW_32Bit\\include",
+                "-LC:\\Development\\SDL2_MinGW_32Bit\\lib",
+                "-lmingw32",
+                "-lSDL2main",
+                "-lSDL2",
+                "-lSDL2_image",
+                "-mwindows"
+            ],
+            "options": {
+                "cwd": "C:\\MinGW\\bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
